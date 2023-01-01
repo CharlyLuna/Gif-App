@@ -1,13 +1,18 @@
 import { useState } from "react";
 
-export const AddCategory = () => {
+export const AddCategory = ({ onNewCategory }) => {
   const [inputValue, setInputValue] = useState("Death note");
 
   const onValueChange = ({ target }) => setInputValue(target.value);
 
   const onSubmit = (event) => {
+    const newInputValue = inputValue.trim();
     event.preventDefault();
-    console.log(inputValue);
+    if (newInputValue.length <= 1) return;
+
+    // setCategories(inputValue);
+    onNewCategory(newInputValue);
+    setInputValue("");
   };
 
   return (
