@@ -18,6 +18,10 @@ input {
   width: 100%;
 }
 
+h1 {
+  text-align: center;
+}
+
 h2 {
   font-size: 1.5rem;
 }
@@ -25,6 +29,14 @@ h2 {
 h3 {
   font-size: 3rem;
   margin-bottom: 5px;
+}
+
+button {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid rgb(97, 32, 158);
+  padding: 7px 15px;
+  margin: 20px 0px;
 }
 
 .card-grid {
